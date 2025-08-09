@@ -16,9 +16,6 @@ const RootLayout = () => {
       <li>
         <NavLink to={`/lost-and-found-items`}>Lost & Found Items</NavLink>
       </li>
-      <li>
-        <NavLink to={`/404`}>404</NavLink>
-      </li>
       {!user && (
         <>
           <li>

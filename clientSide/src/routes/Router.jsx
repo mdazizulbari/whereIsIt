@@ -28,7 +28,6 @@ const router = createBrowserRouter([
       },
       { path: "sign-in", element: <SignIn /> },
       { path: "sign-up", element: <SignUp /> },
-      { path: "404", element: <Error /> },
       {
         path: "lost-and-found-items",
         loader: () =>
