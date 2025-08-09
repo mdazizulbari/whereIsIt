@@ -8,7 +8,14 @@ WhereIsIt is a full-stack web application designed to help users report, browse,
 
 [Visit WhereIsIt Live](https://whereisit-sma.netlify.app/)
 
-## Key Features
+## ✨ Core Features
+
+- **Interactive Search**: Allows users to search for items or locations with real-time results.
+- **Map Integration**: Displays locations using a Map API for intuitive navigation.
+- **User Authentication**: Secure login system for personalized features.
+- **Responsive Design**: Optimized for both mobile and desktop users.
+
+## All Features
 
 - **User Authentication**: Email/password-based login and registration, with Google social login integration using Firebase Authentication.
 - **Lost & Found Items**: Users can add, search, update, and delete, and manage lost or found items via private routes.
@@ -47,26 +54,37 @@ WhereIsIt is a full-stack web application designed to help users report, browse,
 - `cors`: ^2.8.5 - To handle CORS in production.
 - `dotenv`: ^16.3.1 - For managing environment variables.
 
-## Setup Instructions
+## 🚀 How to Run Locally
 
-1. **Clone Repositories**:
-   - Client: `git clone https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-mdazizulbari`
-   - Server: `git clone https://github.com/Programming-Hero-Web-Course4/b11a11-server-side-mdazizulbari`
-2. **Install Dependencies**:
-   - Run `npm install` in both client and server directories.
-3. **Environment Variables**:
-   - Create `.env.local` in the client root with Firebase config keys.
-   - Create `.env` in the server root with MongoDB URI and JWT secret.
-4. **Run Locally**:
-   - Client: `npm start` (runs on `http://localhost:3000`).
-   - Server: `npm start` (runs on `https://b11a11-server-side-mdazizulbari.vercel.app`).
-5. **Deploy**:
-   - Client: Deploy to Netlify/Vercel.
-   - Server: Deploy to Render/Heroku.
-   - Ensure Firebase domain authorization for production.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/mdazizulbari/whereIsIt.git
+   ```
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd whereIsIt
+   ```
+3. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+4. **Set Up Environment Variables**:
+   - Create a `.env` file in the root directory.
+   - Add: `VITE_API_URL=your_backend_url`, `MONGO_URI=your_mongo_uri`, `MAP_API_KEY=your_map_api_key`
+5. **Run the Backend**:
+   ```bash
+   cd server
+   npm start
+   ```
+6. **Run the Frontend**:
+   ```bash
+   cd client
+   npm run dev
+   ```
+7. Open `http://localhost:5173` in your browser.
 
-## Notes
+## 🔗 Resources
 
-- The project includes at least 15 meaningful client-side commits and 8 server-side commits with descriptive messages.
-- All private routes are protected, and reloading does not redirect logged-in users to the login page.
-- The website is free of CORS, 404, or 504 errors in production.
+- [Leaflet Documentation](https://leafletjs.com/reference.html)
+- [React Documentation](https://react.dev/)
+- [MongoDB Documentation](https://www.mongodb.com/docs/)
