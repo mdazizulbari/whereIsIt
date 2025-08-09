@@ -33,10 +33,12 @@ const RootLayout = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="">
       <Navbar links={links} />
       <ToastContainer />
-      <Outlet />
+      <div className="max-w-7xl mx-auto">
+        <Outlet />
+      </div>
       <Footer links={links} />
     </div>
   );
