@@ -14,12 +14,12 @@ const Navbar = ({ links }) => {
         duration: 0.4,
         scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
       }}
-      className="navbar justify-center bg-base-100 shadow-xl sticky z-50 top-0 max-w-7xl rounded-b-4xl"
+      className="navbar justify-center text-base-100 bg-primary shadow-xl sticky z-50 top-0 max-w-7xl rounded-b-4xl"
     >
       <div className="flex-1 hidden md:flex">
         <a
           href="/"
-          className="btn text-primary italic btn-ghost rounded-full text-xl"
+          className="btn font-bold text-base-100 italic btn-ghost rounded-full text-xl"
         >
           WhereIsIt
         </a>
@@ -29,11 +29,11 @@ const Navbar = ({ links }) => {
 
         {user && (
           <div className="space-x-4 flex">
-            <button className="btn btn-primary" onClick={signOutAcc}>
+            <button className="btn" onClick={signOutAcc}>
               Sign Out
             </button>
             <div className="dropdown">
-              <div tabIndex={0} role="button" className="btn m-1">
+              <div tabIndex={0} role="button" className="btn">
                 <div
                   className="tooltip tooltip-bottom"
                   data-tip={user.displayName}
@@ -65,7 +65,7 @@ const Navbar = ({ links }) => {
           </div>
         )}
         <div className="hidden md:flex">
-          <label className="toggle text-base-content mx-3">
+          <label className="toggle text-base-content bg-base-100 mx-3">
             <input type="checkbox" value="dark" className="theme-controller" />
 
             <svg
