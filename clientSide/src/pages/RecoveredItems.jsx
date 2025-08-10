@@ -94,7 +94,7 @@ const RecoveredItems = () => {
       ) : (
         <div className="grid bg-base-100 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {items.map((item) => (
-            <div className="card bg-base-200 shadow-sm">
+            <div className="card bg-base-200 shadow-sm" key={item._id}>
               <figure className="px-10 pt-10">
                 <img
                   src={item.image}
