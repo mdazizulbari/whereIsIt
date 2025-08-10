@@ -20,7 +20,7 @@ const LostAndFoundItems = () => {
 
   return (
     <div className="bg-base-100 p-10">
-        <title>WhereIsIt | Add Item</title>
+      <title>WhereIsIt | Add Item</title>
       <div className="flex flex-col justify-center items-center">
         <div className="flex-col justify-center items-center ">
           <h1 className="text-4xl font-bold text-primary text-center my-5">
@@ -70,7 +70,7 @@ const LostAndFoundItems = () => {
                   <div className="card-actions">
                     <Link
                       to={`/item-details/${item._id}`}
-                      className="btn btn-primary"
+                      className="btn btn-soft btn-primary"
                     >
                       View Details
                     </Link>

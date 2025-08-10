@@ -28,7 +28,7 @@ const ItemsSection = ({ items }) => {
               <div className="card-actions">
                 <Link
                   to={`/item-details/${item._id}`}
-                  className="btn btn-primary"
+                  className="btn btn-primary btn-soft"
                 >
                   View Details
                 </Link>
@@ -38,10 +38,7 @@ const ItemsSection = ({ items }) => {
         ))}
       </div>
 
-      <Link
-        to={`/lost-and-found-items`}
-        className="btn btn-primary rounded-full"
-      >
+      <Link to={`/lost-and-found-items`} className="btn btn-primary btn-xl">
         View All Items
       </Link>
     </div>
