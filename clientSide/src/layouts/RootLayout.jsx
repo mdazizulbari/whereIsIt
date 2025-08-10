@@ -16,6 +16,12 @@ const RootLayout = () => {
       <li>
         <NavLink to={`/lost-and-found-items`}>Lost & Found Items</NavLink>
       </li>
+      <li>
+        <NavLink to={`/terms`}>Terms & Conditions</NavLink>
+      </li>
+      <li>
+        <NavLink to={`/privacy-policy`}>Privacy Policy</NavLink>
+      </li>
       {!user && (
         <>
           <li>

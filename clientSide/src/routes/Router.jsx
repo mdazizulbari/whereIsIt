@@ -12,6 +12,8 @@ import MyItems from "../pages/MyItems";
 import RecoveredItems from "../pages/RecoveredItems";
 import ItemDetails from "../pages/ItemDetails";
 import UpdateItem from "../pages/UpdateItem";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsAndConditions from "../pages/TermsAndConditions";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,8 @@ const router = createBrowserRouter([
       },
       { path: "sign-in", element: <SignIn /> },
       { path: "sign-up", element: <SignUp /> },
+      { path: "privacy-policy", element: <PrivacyPolicy /> },
+      { path: "terms", element: <TermsAndConditions /> },
       {
         path: "lost-and-found-items",
         loader: () =>
