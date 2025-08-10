@@ -94,7 +94,10 @@ const RecoveredItems = () => {
       ) : (
         <div className="grid bg-base-100 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           {items.map((item) => (
-            <div className="card bg-base-200 shadow-sm" key={item._id}>
+            <div
+              className="card bg-base-200 hover:scale-105 transition-all ease-in-out duration-300 shadow-sm"
+              key={item._id}
+            >
               <figure className="px-10 pt-10">
                 <img
                   src={item.image}
@@ -108,8 +111,8 @@ const RecoveredItems = () => {
                 <p className="text-gray-500">{item.location}</p>
                 <div className="card-actions">
                   <Link
-                    to={`/item-details/${item._id}`}
-                    className="btn btn-primary"
+                    to={`/recovered-item-details/${item._id}`}
+                    className="btn btn-outline btn-primary"
                   >
                     View Details
                   </Link>

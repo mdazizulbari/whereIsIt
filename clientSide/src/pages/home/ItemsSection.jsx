@@ -13,7 +13,10 @@ const ItemsSection = ({ items }) => {
 
       <div className="grid bg-base-100 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
         {displayItems.map((item) => (
-          <div key={item._id} className="card bg-base-200 shadow-sm">
+          <div
+            key={item._id}
+            className="card hover:scale-105 transition-all ease-in-out duration-300 bg-base-200 shadow-sm"
+          >
             <figure className="px-10 pt-10">
               <img
                 src={item.image}
@@ -28,7 +31,7 @@ const ItemsSection = ({ items }) => {
               <div className="card-actions">
                 <Link
                   to={`/item-details/${item._id}`}
-                  className="btn btn-primary btn-soft"
+                  className="btn btn-primary btn-outline"
                 >
                   View Details
                 </Link>
@@ -38,7 +41,10 @@ const ItemsSection = ({ items }) => {
         ))}
       </div>
 
-      <Link to={`/lost-and-found-items`} className="btn btn-primary btn-xl">
+      <Link
+        to={`/lost-and-found-items`}
+        className="btn btn-primary btn-soft btn-xl"
+      >
         View All Items
       </Link>
     </div>

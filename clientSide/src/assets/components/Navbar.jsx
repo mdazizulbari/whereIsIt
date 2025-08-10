@@ -32,7 +32,7 @@ const Navbar = ({ links }) => {
 
           {user && (
             <div className="space-x-4 flex">
-              <button className="btn" onClick={signOutAcc}>
+              <button className="btn btn-outline" onClick={signOutAcc}>
                 Sign Out
               </button>
               <div className="dropdown">

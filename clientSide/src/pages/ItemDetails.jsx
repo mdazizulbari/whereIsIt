@@ -89,9 +89,9 @@ const ItemDetails = () => {
           <figure className="px-10 pt-10">
             <img src={item.image} alt={item.postTitle} className="rounded-xl" />
           </figure>
-        <h1 className="text-4xl font-bold text-primary text-center my-5 mt-15">
-          {item.postTitle}
-        </h1>
+          <h1 className="text-4xl font-bold text-primary text-center my-5 mt-15">
+            {item.postTitle}
+          </h1>
           <div className="card-body items-center text-lg text-center">
             <p>{item.description}</p>
             <p className="text-gray-500">Location: {item.location}</p>
@@ -102,7 +102,7 @@ const ItemDetails = () => {
               {/* You can open the modal using document.getElementById('ID').showModal() method */}
               <button
                 id="modal-button"
-                className="btn btn-primary btn-soft mt-10"
+                className="btn btn-primary btn-outline mt-10"
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
                 }
@@ -178,14 +178,14 @@ const ItemDetails = () => {
                         ) : postType === "Lost" ? (
                           <button
                             type="submit"
-                            className="btn btn-primary btn-soft mt-4"
+                            className="btn btn-primary btn-outline mt-4"
                           >
                             Found This!
                           </button>
                         ) : (
                           <button
                             type="submit"
-                            className="btn btn-primary btn-soft mt-4"
+                            className="btn btn-primary btn-outline mt-4"
                           >
                             This is Mine!
                           </button>

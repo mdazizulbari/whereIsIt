@@ -98,19 +98,19 @@ const MyItems = () => {
                   <td className="space-x-1">
                     <Link
                       to={`/item-details/${item._id}`}
-                      className="btn btn-primary btn-xs"
+                      className="btn btn-primary btn-outline btn-xs"
                     >
                       <FaEye />
                     </Link>
                     <Link
                       to={`/update-item/${item._id}`}
-                      className="btn btn-primary btn-xs"
+                      className="btn btn-primary btn-outline btn-xs"
                     >
                       <FaPen />
                     </Link>
                     <button
                       onClick={() => handleDeleteItem(item._id)}
-                      className="btn btn-primary btn-xs"
+                      className="btn btn-primary btn-xs btn-outline"
                     >
                       <FaTrash />
                     </button>

@@ -42,10 +42,13 @@ const Error = () => {
           like a lost item. Don't worry, let's get you back on track!
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link to="/" className="btn btn-primary">
+          <Link to="/" className="btn btn-soft btn-primary">
             Return to Home
           </Link>
-          <Link to="/lost-and-found-items" className="btn btn-primary btn-soft">
+          <Link
+            to="/lost-and-found-items"
+            className="btn btn-primary btn-outline"
+          >
             Browse Lost & Found
           </Link>
         </div>

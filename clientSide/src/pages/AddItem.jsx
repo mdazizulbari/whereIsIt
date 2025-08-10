@@ -59,7 +59,11 @@ const AddItem = () => {
               <div>
                 <fieldset className="fieldset space-y-2 justify-items-center">
                   <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn m-1">
+                    <div
+                      tabIndex={0}
+                      role="button"
+                      className="btn m-1 btn-outline btn-primary"
+                    >
                       Select Post Type
                     </div>
                     <ul
@@ -74,7 +78,7 @@ const AddItem = () => {
                           <input
                             type="radio"
                             name="postType"
-                            className="radio"
+                            className="radio radio-primary"
                             value={type}
                           />
                           <span className="label-text">{type}</span>
@@ -86,7 +90,7 @@ const AddItem = () => {
                   <input
                     type="text"
                     name="image"
-                    className="input"
+                    className="input input "
                     placeholder="Image URL"
                     required
                   />
@@ -143,7 +147,10 @@ const AddItem = () => {
                     required
                   />
 
-                  <button type="submit" className="btn btn-neutral mt-4 w-full">
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-outline mt-4 w-full"
+                  >
                     Create
                   </button>
                 </fieldset>

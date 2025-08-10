@@ -14,6 +14,7 @@ import ItemDetails from "../pages/ItemDetails";
 import UpdateItem from "../pages/UpdateItem";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsAndConditions from "../pages/TermsAndConditions";
+import RecoveredItemDetails from "../pages/RecoveredItemsDetails";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,19 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <ItemDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "recovered-item-details/:id",
+        loader: ({ params }) =>
+          fetch(
+            `https://b11a11-server-side-mdazizulbari.vercel.app/recoveredItems/${params.id}`
+          ),
+        hydrateFallbackElement: <Loader />,
+        element: (
+          <PrivateRoute>
+            <RecoveredItemDetails />
           </PrivateRoute>
         ),
       },
