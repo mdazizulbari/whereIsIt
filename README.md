@@ -11,7 +11,7 @@ WhereIsIt is a full-stack web application designed to help users report, browse,
 ## ✨ Core Features
 
 - **Interactive Search**: Allows users to search for items or locations with real-time results.
-- **Map Integration**: Displays locations using a Map API for intuitive navigation.
+- **Dynamic Layout**: Offers a toggle between card and table views for flexible item display.
 - **User Authentication**: Secure login system for personalized features.
 - **Responsive Design**: Optimized for both mobile and desktop users.
 
