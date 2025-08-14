@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Footer = ({ links }) => {
   return (
@@ -6,7 +7,15 @@ const Footer = ({ links }) => {
       <h3 className="text-primary font-gummy text-5xl font-bold italic">
         WhereIsIt
       </h3>
-      <ul className="grid grid-flow-col gap-4">{links}</ul>
+      <ul className="grid grid-flow-col gap-4">
+        {links}
+        <li>
+          <NavLink to={`/terms`}>Terms & Conditions</NavLink>
+        </li>
+        <li>
+          <NavLink to={`/privacy-policy`}>Privacy Policy</NavLink>
+        </li>
+      </ul>
       <aside>
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by{" "}
