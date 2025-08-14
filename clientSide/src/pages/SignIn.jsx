@@ -31,6 +31,10 @@ const SignIn = () => {
       });
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then((result) => {
@@ -49,13 +53,13 @@ const SignIn = () => {
   }, []);
 
   return (
-    <div className="bg-base-100 p-10 h-[625px]">
-        <title>WhereIsIt | Sign In</title>
-      <div className="flex-col justify-center items-center ">
-        <h1 className="text-4xl font-bold text-primary text-center my-5">
+    <div className="bg-base-100 h-[625px] p-10">
+      <title>WhereIsIt | Sign In</title>
+      <div className="flex-col items-center justify-center">
+        <h1 className="text-primary my-5 text-center text-4xl font-bold">
           Sign In
         </h1>
-        <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
             <form onSubmit={handleSignIn}>
               <div>
@@ -100,7 +104,7 @@ const SignIn = () => {
 
             <div className="text-center">
               Don't have an account? Please{" "}
-              <Link className="underline text-blue-500" to={"/sign-up"}>
+              <Link className="text-blue-500 underline" to={"/sign-up"}>
                 Sign Up
               </Link>
             </div>

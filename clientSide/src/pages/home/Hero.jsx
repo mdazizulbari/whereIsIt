@@ -55,6 +55,10 @@ const Hero = () => {
   const goToPrev = () =>
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section
       className="bg-base-100 relative mt-10 flex h-[60vh] items-center justify-center sm:h-[70vh] md:h-[80vh]"

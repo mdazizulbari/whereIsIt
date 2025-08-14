@@ -10,6 +10,10 @@ const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
   const { signInWithGoogle } = use(AuthContext);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleSignUp = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -21,7 +25,7 @@ const SignUp = () => {
     const passwordRegExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
     if (passwordRegExp.test(password) === false) {
       toast.error(
-        `Password must have one uppercase, one lowercase, one number and must be more than 6 characters`
+        `Password must have one uppercase, one lowercase, one number and must be more than 6 characters`,
       );
       return;
     }
@@ -67,13 +71,13 @@ const SignUp = () => {
   }, []);
 
   return (
-    <div className="bg-base-100 p-10 h-[625px]">
-        <title>WhereIsIt | Sign Up</title>
-      <div className="flex-col justify-center items-center ">
-        <h1 className="text-4xl font-bold text-center my-5 text-primary">
+    <div className="bg-base-100 h-[625px] p-10">
+      <title>WhereIsIt | Sign Up</title>
+      <div className="flex-col items-center justify-center">
+        <h1 className="text-primary my-5 text-center text-4xl font-bold">
           Sign Up
         </h1>
-        <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
             <div>
               <form className="fieldset" onSubmit={handleSignUp}>
@@ -129,7 +133,7 @@ const SignUp = () => {
 
             <div className="text-center">
               Have an account? Please{" "}
-              <Link className="underline text-blue-500" to={"/sign-in"}>
+              <Link className="text-blue-500 underline" to={"/sign-in"}>
                 Sign In
               </Link>
             </div>

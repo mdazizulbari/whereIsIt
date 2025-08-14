@@ -21,6 +21,10 @@ const MyItems = () => {
   }, [initialItems, user]);
   // console.log(items);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleDeleteItem = (id) => {
     Swal.fire({
       title: "Are you sure?",
