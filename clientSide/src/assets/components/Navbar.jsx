@@ -7,7 +7,7 @@ const Navbar = ({ links }) => {
   const { signOutAcc, user } = use(AuthContext);
 
   return (
-    <div className="max-w-full bg-primary shadow-xl sticky z-50 top-0 rounded-b-4xl">
+    <div className="bg-primary sticky top-0 z-50 max-w-full rounded-b-4xl shadow-xl">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -15,23 +15,23 @@ const Navbar = ({ links }) => {
           duration: 0.4,
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
         }}
-        className="navbar max-w-7xl mx-auto justify-center text-base-100 px-2"
+        className="navbar text-base-100 mx-auto max-w-7xl justify-center px-2"
       >
-        <div className="flex-1 hidden md:flex">
+        <div className="hidden flex-1 md:flex">
           <a
             href="/"
-            className="btn font-bold text-base-100 italic btn-ghost rounded-full text-xl"
+            className="btn font-gummy text-base-100 btn-ghost hover:bg-primary rounded-full text-3xl font-bold italic"
           >
             WhereIsIt
           </a>
         </div>
-        <div className="flex flex-col md:flex-row items-center">
-          <ul className="menu menu-horizontal px-1 font-bold text-lg">
+        <div className="flex flex-col items-center md:flex-row">
+          <ul className="menu menu-horizontal px-1 text-lg font-bold">
             {links}
           </ul>
 
           {user && (
-            <div className="space-x-4 flex">
+            <div className="flex space-x-4">
               <button className="btn btn-outline" onClick={signOutAcc}>
                 Sign Out
               </button>
@@ -52,7 +52,7 @@ const Navbar = ({ links }) => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content text-primary menu bg-base-200 rounded-box w-28 z-1 p-2 shadow-sm"
+                  className="dropdown-content text-primary menu bg-base-200 rounded-box z-1 w-28 p-2 shadow-sm"
                 >
                   <li>
                     <NavLink to={`/add-item`}>Add Item</NavLink>

@@ -1,2 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@theme {
+  --font-gummy: "Sour Gummy", sans-serif;
+}
 @import "tailwindcss";
 @plugin "daisyui";
+
+.comfortaa-font {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

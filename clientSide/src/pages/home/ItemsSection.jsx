@@ -2,26 +2,26 @@ import React from "react";
 import { Link } from "react-router";
 
 const ItemsSection = ({ items }) => {
-  const displayItems = [...items].reverse().slice(0, 6);
+  const displayItems = [...items].reverse().slice(0, 8);
   // console.log(displayItems)
 
   return (
-    <div className="flex flex-col justify-center items-center gap-10">
-      <h2 className="text-5xl text-primary font-bold">
+    <div className="flex flex-col items-center justify-center gap-10">
+      <h2 className="text-primary font-gummy text-center text-4xl font-bold">
         Latest Lost and Found Items
       </h2>
 
-      <div className="grid bg-base-100 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+      <div className="bg-base-100 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         {displayItems.map((item) => (
           <div
             key={item._id}
-            className="card hover:scale-105 transition-all ease-in-out duration-300 bg-base-200 shadow-sm"
+            className="card bg-base-200 shadow-sm transition-all duration-300 ease-in-out hover:scale-105"
           >
             <figure className="px-10 pt-10">
               <img
                 src={item.image}
                 alt={item.postTitle}
-                className="rounded-xl w-20 h-20"
+                className="h-20 w-20 rounded-xl object-cover"
               />
             </figure>
             <div className="card-body items-center text-center">

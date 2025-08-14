@@ -82,10 +82,10 @@ const ItemDetails = () => {
   };
 
   return (
-    <div className="bg-base-100 p-10">
+    <div className="bg-base-100 py-10">
       <title>WhereIsIt | Item Details</title>
       <div className="flex-col justify-center items-center ">
-        <div className="card bg-base-200 shadow-sm">
+        <div className="card rounded-4xl bg-base-200 shadow-sm">
           <figure className="px-10 pt-10">
             <img src={item.image} alt={item.postTitle} className="rounded-xl" />
           </figure>

@@ -49,26 +49,26 @@ const AddItem = () => {
   return (
     <div className="bg-base-100 p-10 pb-0">
       <title>WhereIsIt | Add Item</title>
-      <div className="flex-col justify-center items-center ">
-        <h1 className="text-4xl font-bold text-center my-5 text-primary">
+      <div className="flex-col items-center justify-center">
+        <h1 className="font-gummy text-primary my-5 text-center text-4xl font-bold">
           Create Post
         </h1>
-        <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
             <form onSubmit={handleCreateItem}>
               <div>
-                <fieldset className="fieldset space-y-2 justify-items-center">
+                <fieldset className="fieldset justify-items-center space-y-2">
                   <div className="dropdown">
                     <div
                       tabIndex={0}
                       role="button"
-                      className="btn m-1 btn-outline btn-primary"
+                      className="btn btn-outline btn-primary m-1"
                     >
                       Select Post Type
                     </div>
                     <ul
                       tabIndex={0}
-                      className="dropdown-content space-y-2 menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+                      className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 space-y-2 p-2 shadow-sm"
                     >
                       {postType.map((type, index) => (
                         <label
@@ -90,7 +90,7 @@ const AddItem = () => {
                   <input
                     type="text"
                     name="image"
-                    className="input input "
+                    className="input input"
                     placeholder="Image URL"
                     required
                   />

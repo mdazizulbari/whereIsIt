@@ -19,7 +19,7 @@ const RecoveredItems = () => {
   useEffect(() => {
     if (user.email) {
       const filtered = initialItems.filter(
-        (item) => item.recoveryUserEmail === user.email
+        (item) => item.recoveryUserEmail === user.email,
       );
       setItems(filtered);
     }
@@ -33,7 +33,7 @@ const RecoveredItems = () => {
   return (
     <div>
       <title>WhereIsIt | Recovered Items</title>
-      <h1 className="text-4xl font-bold text-center text-primary my-8">
+      <h1 className="text-primary font-gummy my-8 text-center text-4xl font-bold">
         My Recovered Items
       </h1>
 
@@ -50,7 +50,7 @@ const RecoveredItems = () => {
       </button>
 
       {isList ? (
-        <div className="overflow-x-auto max-w-2xl mx-auto">
+        <div className="mx-auto min-h-[580px] max-w-2xl overflow-x-auto">
           <table className="table">
             {/* head */}
             <thead>
@@ -66,7 +66,7 @@ const RecoveredItems = () => {
                 items.map((item) => (
                   <tr key={item._id}>
                     <td>
-                      <div className="flex justify-center items-center gap-3">
+                      <div className="flex items-center justify-center gap-3">
                         <div className="avatar">
                           <div className="mask mask-squircle h-12 w-12">
                             <img src={item.image} alt={item.postTitle} />
@@ -83,7 +83,7 @@ const RecoveredItems = () => {
                 ))
               ) : (
                 <tr>
-                  <td colSpan="4" className="text-center py-4">
+                  <td colSpan="4" className="py-4 text-center">
                     No items found.
                   </td>
                 </tr>
@@ -92,17 +92,17 @@ const RecoveredItems = () => {
           </table>
         </div>
       ) : (
-        <div className="grid bg-base-100 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        <div className="bg-base-100 mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <div
-              className="card bg-base-200 hover:scale-105 transition-all ease-in-out duration-300 shadow-sm"
+              className="card bg-base-200 shadow-sm transition-all duration-300 ease-in-out hover:scale-105"
               key={item._id}
             >
               <figure className="px-10 pt-10">
                 <img
                   src={item.image}
                   alt={item.postTitle}
-                  className="rounded-xl w-20 h-20"
+                  className="h-20 w-20 rounded-xl"
                 />
               </figure>
               <div className="card-body items-center text-center">

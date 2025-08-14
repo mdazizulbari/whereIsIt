@@ -8,12 +8,13 @@ const MyItems = () => {
   const { user } = use(AuthContext);
   // console.log(user.email);
   const initialItems = useLoaderData();
+  // console.log(initialItems);
   const [items, setItems] = useState(initialItems);
 
   useEffect(() => {
     if (user.email) {
       const filtered = initialItems.filter(
-        (item) => item.userEmail === user.email
+        (item) => item.userEmail === user.email,
       );
       setItems(filtered);
     }
@@ -35,7 +36,7 @@ const MyItems = () => {
           `https://b11a11-server-side-mdazizulbari.vercel.app/items/${id}`,
           {
             method: "DELETE",
-          }
+          },
         )
           .then((res) => res.json())
           .then((data) => {
@@ -58,12 +59,12 @@ const MyItems = () => {
   }, []);
 
   return (
-    <div>
+    <div className="min-h-[580px]">
       <title>WhereIsIt | My Items</title>
-      <h1 className="text-4xl font-bold text-center text-primary my-8">
+      <h1 className="text-primary font-gummy my-8 text-center text-4xl font-bold">
         My Lost or Found Items
       </h1>
-      <div className="overflow-x-auto max-w-2xl mx-auto">
+      <div className="mx-auto max-w-2xl overflow-x-auto">
         <table className="table">
           {/* head */}
           <thead>
@@ -79,7 +80,7 @@ const MyItems = () => {
               items.map((item) => (
                 <tr key={item._id}>
                   <td>
-                    <div className="flex justify-center items-center gap-3">
+                    <div className="flex items-center justify-center gap-3">
                       <div className="avatar">
                         <div className="mask mask-squircle h-12 w-12">
                           <img src={item.image} alt={item.postTitle} />
@@ -95,31 +96,33 @@ const MyItems = () => {
                   </td>
                   <td>{item.postTitle}</td>
                   <td>{item.postType}</td>
-                  <td className="space-x-1">
-                    <Link
-                      to={`/item-details/${item._id}`}
-                      className="btn btn-primary btn-outline btn-xs"
-                    >
-                      <FaEye />
-                    </Link>
-                    <Link
-                      to={`/update-item/${item._id}`}
-                      className="btn btn-primary btn-outline btn-xs"
-                    >
-                      <FaPen />
-                    </Link>
-                    <button
-                      onClick={() => handleDeleteItem(item._id)}
-                      className="btn btn-primary btn-xs btn-outline"
-                    >
-                      <FaTrash />
-                    </button>
+                  <td className="">
+                    <div className="flex gap-1">
+                      <Link
+                        to={`/item-details/${item._id}`}
+                        className="btn btn-primary btn-outline btn-xs"
+                      >
+                        <FaEye />
+                      </Link>
+                      <Link
+                        to={`/update-item/${item._id}`}
+                        className="btn btn-primary btn-outline btn-xs"
+                      >
+                        <FaPen />
+                      </Link>
+                      <button
+                        onClick={() => handleDeleteItem(item._id)}
+                        className="btn btn-primary btn-xs btn-outline"
+                      >
+                        <FaTrash />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="4" className="text-center py-4">
+                <td colSpan="4" className="py-4 text-center">
                   No items found.
                 </td>
               </tr>

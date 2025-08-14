@@ -4,6 +4,7 @@ import HowItWorks from "./HowItWorks";
 import FAQ from "./FAQ";
 import ItemsSection from "./ItemsSection";
 import { useLoaderData } from "react-router";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   const items = useLoaderData();
@@ -19,6 +20,7 @@ const Home = () => {
       <ItemsSection items={items} />
       <HowItWorks />
       <FAQ />
+      <Testimonials />
     </div>
   );
 };

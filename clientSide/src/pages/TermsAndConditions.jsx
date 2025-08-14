@@ -11,21 +11,22 @@ const TermsAndConditions = () => {
 
   return (
     <motion.div
-      className="min-h-screen py-12 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen px-4 py-12 sm:px-6 lg:px-8"
       initial="initial"
       animate="animate"
       variants={fadeIn}
     >
-      <div className="max-w-4xl mx-auto bg-base-100 shadow-xl rounded-lg p-8">
-        <h1 className="text-4xl font-bold text-primary mb-6 text-center">
+      <div className="bg-base-100 mx-auto max-w-4xl rounded-lg p-8 shadow-xl">
+        <title>WhereIsIt | Terms</title>
+        <h1 className="font-gummy text-primary mb-6 text-center text-4xl font-bold">
           📝 Terms and Conditions
         </h1>
-        <p className="text-lg text-base-content mb-4 italic">
+        <p className="text-base-content mb-4 text-lg italic">
           Last Updated: August 10, 2025
         </p>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             1. Acceptance of Terms
           </h2>
           <p className="text-base-content">
@@ -36,11 +37,11 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             2. User Responsibilities
           </h2>
           <p className="text-base-content">As a user, you agree to:</p>
-          <ul className="list-disc list-inside text-base-content space-y-2">
+          <ul className="text-base-content list-inside list-disc space-y-2">
             <li>
               Provide accurate and truthful information when posting lost or
               found items.
@@ -57,7 +58,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             3. Intellectual Property
           </h2>
           <p className="text-base-content">
@@ -68,7 +69,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             4. User-Generated Content
           </h2>
           <p className="text-base-content">
@@ -81,7 +82,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             5. Limitation of Liability
           </h2>
           <p className="text-base-content">
@@ -93,9 +94,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
-            6. Termination
-          </h2>
+          <h2 className="mb-4 text-2xl font-semibold">6. Termination</h2>
           <p className="text-base-content">
             We reserve the right to suspend or terminate your account if you
             violate these terms or engage in harmful behavior. You may delete
@@ -104,9 +103,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
-            7. Governing Law
-          </h2>
+          <h2 className="mb-4 text-2xl font-semibold">7. Governing Law</h2>
           <p className="text-base-content">
             These terms are governed by the laws of [Your Country/State]. Any
             disputes will be resolved in the courts of [Your Jurisdiction].
@@ -114,9 +111,7 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
-            8. Contact Us
-          </h2>
+          <h2 className="mb-4 text-2xl font-semibold">8. Contact Us</h2>
           <p className="text-base-content">
             For questions about these Terms, contact us at{" "}
             <a

@@ -11,23 +11,22 @@ const PrivacyPolicy = () => {
 
   return (
     <motion.div
-      className="min-h-screen py-12 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen px-4 py-12 sm:px-6 lg:px-8"
       initial="initial"
       animate="animate"
       variants={fadeIn}
     >
-      <div className="max-w-4xl mx-auto bg-base-100 shadow-xl rounded-lg p-8">
-        <h1 className="text-4xl font-bold text-primary mb-6 text-center">
+      <div className="bg-base-100 mx-auto max-w-4xl rounded-lg p-8 shadow-xl">
+        <title>WhereIsIt | Privacy Policy</title>
+        <h1 className="font-gummy text-primary mb-6 text-center text-4xl font-bold">
           🔒 Privacy Policy
         </h1>
-        <p className="text-lg text-base-content mb-4 italic">
+        <p className="text-base-content mb-4 text-lg italic">
           Last Updated: August 10, 2025
         </p>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
-            1. Introduction
-          </h2>
+          <h2 className="mb-4 text-2xl font-semibold">1. Introduction</h2>
           <p className="text-base-content">
             Welcome to <span className="font-bold">WhereIsIt</span>, a platform
             dedicated to helping users recover lost items and connect with
@@ -38,10 +37,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             2. Information We Collect
           </h2>
-          <ul className="list-disc list-inside text-base-content space-y-2">
+          <ul className="text-base-content list-inside list-disc space-y-2">
             <li>
               <strong>Personal Information:</strong> Name, email, photo URL, and
               contact details provided during registration or when posting
@@ -66,11 +65,11 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             3. How We Use Your Information
           </h2>
           <p className="text-base-content">We use your data to:</p>
-          <ul className="list-disc list-inside text-base-content space-y-2">
+          <ul className="text-base-content list-inside list-disc space-y-2">
             <li>
               Facilitate the posting and recovery of lost and found items.
             </li>
@@ -87,14 +86,14 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             4. Data Sharing and Security
           </h2>
           <p className="text-base-content">
             We do not sell or share your personal data with third parties,
             except:
           </p>
-          <ul className="list-disc list-inside text-base-content space-y-2">
+          <ul className="text-base-content list-inside list-disc space-y-2">
             <li>
               With your consent, to facilitate item recovery (e.g., sharing
               contact details with another user).
@@ -109,11 +108,9 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
-            5. Your Rights
-          </h2>
+          <h2 className="mb-4 text-2xl font-semibold">5. Your Rights</h2>
           <p className="text-base-content">You have the right to:</p>
-          <ul className="list-disc list-inside text-base-content space-y-2">
+          <ul className="text-base-content list-inside list-disc space-y-2">
             <li>Access, update, or delete your personal data.</li>
             <li>Opt out of non-essential communications.</li>
             <li>Request information about how your data is used.</li>
@@ -131,7 +128,7 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             6. Cookies and Tracking
           </h2>
           <p className="text-base-content">
@@ -141,7 +138,7 @@ const PrivacyPolicy = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold   mb-4">
+          <h2 className="mb-4 text-2xl font-semibold">
             7. Changes to This Policy
           </h2>
           <p className="text-base-content">
