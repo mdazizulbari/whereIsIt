@@ -93,11 +93,6 @@ const Navbar = ({ links }) => {
             <FaBars/>
           </div>
           {/* menu contents */}
-          {/* <div
-            tabIndex={0}
-            className="dropdown-content bg-base-100 rounded-box z-1 flex w-52 flex-col items-center p-2 shadow-sm md:hidden menu md:flex-row"
-          >
-            <ul className="menu menu-horizontal px-1 text-lg font-bold"> */}
           <ul
             tabIndex={0}
             className="dropdown-content -ml-40 menu bg-base-100 rounded-box z-1 w-52 p-2 text-black shadow-sm"

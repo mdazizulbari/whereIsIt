@@ -117,7 +117,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Navigation Buttons */}
-      <div className="absolute inset-x-0 top-1/2 flex -translate-y-1/2 transform justify-between px-4 sm:px-6">
+      <div className="absolute inset-x-0 bottom-0 flex -translate-y-1/2 transform justify-around px-4 sm:px-6">
         <button
           onClick={goToPrev}
           className="btn btn-circle btn-ghost hover:bg-primary text-white hover:text-white"
